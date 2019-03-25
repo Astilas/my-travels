@@ -1,33 +1,47 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
 import Quote from "./Quote";
 
-class Travel extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Travels</h1>
-        </header>
-        <Quote
-          destination="Pheonix"
-          country="United States"
-          photo="http://www.office-tourisme-usa.com/sites/default/files/media/arizona-arizonavat-monument-valley-263.jpg"
-	  distance="2m"
-	 
-        />
-        <Quote
-          destination="Horse shoe bend"
-          country="Island"
-          photo="https://guidetoiceland.is/image/413445/x/0/passez-un-moment-dans-une-authentique-grotte-de-glace-au-sommet-d-un-glacier-avec-cette-visite-de-3-jours.jpg"
-	  distance="3m"
-        />
-      </div>
-    );
+const quotes = [
+  {
+    destination: "Los Angeles",
+    country: "United States",
+    photo: "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FHomerSimpson.png?1497567511939",
+    distance: "0m"
+  },
+  {
+    destination: "Paris",
+    country: "France",
+    photo: "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FBartSimpson.png?1497567511638",
+    distance: "1m"
+  },
+  {
+    destination: "Reykjavik",
+    country: "Island",
+    photo: "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FRalphWiggum.png?1497567511523",
+    distance: "2m"
+  },
+  {
+    destination:
+      "Melbourne",
+    country: "Australia",
+    photo: "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FSeymourSkinner.png?1497567511460",
+    distance: "3m"
+  },
+  {
+    destination: "Casablanca",
+  country: "Moroco",
+  photo: "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FSeymourSkinner.png?1497567511460",
+  distance: "4m"
   }
-}
+  ];
 
-export default Travel;
+const Quotes = () => (
+  <div>
+    {quotes.map(quote => <Quote {...quote} />
+    )}
+  </div>
+);
+
+export default Quotes;
