@@ -10,7 +10,7 @@ class Travel extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Simpsons Quotes</h1>
+          <h1 className="App-title">Travels</h1>
         </header>
         <Quote
           destination="Pheonix"
